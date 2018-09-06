@@ -2,9 +2,9 @@ library IEEE;
 use ieee.std_logic_1164.all;
 use work.all;
 
-ENTITY test IS END test;
+ENTITY tb_gate IS END tb_gate;
 
-ARCHITECTURE tb_gate OF test IS
+ARCHITECTURE tb_gate OF tb_gate IS
 	COMPONENT gate
 	PORT (
 		a:IN std_logic;
