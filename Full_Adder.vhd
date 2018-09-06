@@ -28,6 +28,9 @@ BEGIN
 	
 	
 	S <= A XOR B XOR Cin;
-	Cout <= (sub AND (B OR (A AND Cin))) OR ((NOT sub) AND ((A AND B) OR (B AND Cin) OR (B AND Cin)));
+--	Cout <= (sub AND (B OR (A AND Cin))) OR ((NOT sub) AND ((A AND B) OR (B AND Cin) OR (B AND Cin)));
+	
+	
+	Cout <= (sub AND (  ((NOT Cin) AND (NOT A) AND B) OR (Cin AND (NOT A) AND (NOT B)) OR (Cin AND (NOT A) AND B) OR (Cin AND A AND B)  )) OR ((NOT sub) AND ((A AND B) OR (B AND Cin) OR (B AND Cin)));
 	
 END Behaviour;

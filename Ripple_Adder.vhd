@@ -7,8 +7,8 @@ ENTITY Ripple_Adder IS
 	PORT (
 			A   : IN  std_logic_vector(N downto 0);
 			B   : IN  std_logic_vector(N downto 0);
-			sub : IN  std_logic;
 			Cin : IN  std_logic;
+			sub : IN  std_logic;
 			Cout: OUT std_logic;
 			S   : OUT std_logic_vector(N downto 0)
 		);
