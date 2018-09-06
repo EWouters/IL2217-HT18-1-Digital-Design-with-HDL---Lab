@@ -11,10 +11,12 @@ vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Rippl
 vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd}
 vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/gate.vhd}
 vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd}
+vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/mux.vhd}
+vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd}
 
-vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd}
+vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_gate
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_mux
 
 add wave *
 view structure

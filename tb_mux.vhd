@@ -1,7 +1,7 @@
 USE work.ALL;
 
-ENTITY test IS END test;
-ARCHITECTURE testMux OF test IS
+ENTITY testMux IS END testMux;
+ARCHITECTURE testMux OF testMux IS
 COMPONENT mux
 	PORT (
 		a:IN BIT;

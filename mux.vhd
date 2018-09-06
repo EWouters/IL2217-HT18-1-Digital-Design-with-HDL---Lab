@@ -13,7 +13,7 @@ END mux;
 
 ARCHITECTURE behavioural OF mux IS
 BEGIN
-	q <= a WHEN adress = ‘0’ ELSE b;
+	q <= a WHEN adress = '0' ELSE b;
 END behavioural;
 
 ARCHITECTURE dataflow OF mux IS

@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 dD:\Stack\Courses\KTH\Courses\01 - HDL\Laboratory\Lab0\simulation\modelsim
 Efull_adder
-Z1 w1536234543
+Z1 w1536266841
 Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
 Z4 dD:\Stack\Courses\KTH\Courses\01 - HDL\Laboratory\Lab0\simulation\modelsim
@@ -15,7 +15,7 @@ L5
 V<NcJhmhXVK[GN]UAdYP?m0
 Z7 OV;C;10.1d;51
 31
-Z8 !s108 1536239307.341000
+Z8 !s108 1536266865.839000
 Z9 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd|
 Z10 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd|
 Z11 o-93 -work work -O0
@@ -28,7 +28,7 @@ R3
 DEx4 work 10 full_adder 0 22 <NcJhmhXVK[GN]UAdYP?m0
 l17
 L16
-VR[[0dLZFAFBP`OzbO4LBM0
+VOoh=2oRm?m<KBAURWVR_n3
 R7
 31
 R8
@@ -36,7 +36,7 @@ R9
 R10
 R11
 R12
-!s100 bC6f=iZ>E6Z8]Zj[Wf5A[0
+!s100 0]>?Lo^FY<>;:zi`0Y`7R0
 !i10b 1
 Egate
 Z13 w1536235225
@@ -50,7 +50,7 @@ L5
 VHDRW?WU>?nU=LB44Yzd=83
 R7
 31
-Z16 !s108 1536239307.576000
+Z16 !s108 1536266866.116000
 Z17 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/gate.vhd|
 Z18 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/gate.vhd|
 R11
@@ -73,21 +73,72 @@ R11
 R12
 !s100 bFBE0KRH@>H5P_C^U`7@f3
 !i10b 1
-Eripple_adder
-Z19 w1536233475
+Emux
+Z19 w1536240386
 R2
 R3
 R4
-Z20 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd
-Z21 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd
+Z20 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/mux.vhd
+Z21 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/mux.vhd
+l0
+L5
+V7bR4?N9<FC1ZM60RIM>?X2
+R7
+31
+Z22 !s108 1536266866.550000
+Z23 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/mux.vhd|
+Z24 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/mux.vhd|
+R11
+R12
+!s100 ]eF?;f@=<WZ;2n[11^S[e3
+!i10b 1
+Adataflow
+R2
+R3
+Z25 DEx4 work 3 mux 0 22 7bR4?N9<FC1ZM60RIM>?X2
+l21
+L19
+VI7Aj_7`TBdnzc]WH6:YjD1
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 ma=371Ta0a4mKj622hZjX1
+!i10b 1
+Abehavioural
+R2
+R3
+R25
+l15
+L14
+VM>i6GjXo?5f>`D80GTAGN0
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 DV:B7lYPHFkBa2neEkkT^2
+!i10b 1
+Eripple_adder
+Z26 w1536233475
+R2
+R3
+R4
+Z27 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd
+Z28 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd
 l0
 L5
 Vj?hDfUhd9TPa89XzGz>[>0
 R7
 31
-Z22 !s108 1536239307.055000
-Z23 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd|
-Z24 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd|
+Z29 !s108 1536266865.522000
+Z30 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd|
+Z31 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd|
 R11
 R12
 !s100 PQZaYfoUXCh`M7gcAE<JS2
@@ -101,28 +152,28 @@ L17
 VH5n8XfIegTXGiJA>RIZG11
 R7
 31
-R22
-R23
-R24
+R29
+R30
+R31
 R11
 R12
 !s100 i[zdlPeb=<ZZDQhGalm;<1
 !i10b 1
 Etb_full_adder
-Z25 w1536231604
+Z32 w1536231604
 R2
 R3
 R4
-Z26 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd
-Z27 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd
+Z33 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd
+Z34 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd
 l0
 L5
 V;D_MSMCBKOnQC__gOcUIa2
 R7
 31
-Z28 !s108 1536239306.814000
-Z29 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd|
-Z30 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd|
+Z35 !s108 1536266865.261000
+Z36 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd|
+Z37 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd|
 R11
 R12
 !s100 kLi`6VaBfi@C[RX]a<Ad81
@@ -136,67 +187,69 @@ L9
 VmdiHRG=I:hcZ9XAD7ECMW3
 R7
 31
-R28
-R29
-R30
-R11
-R12
-!s100 ^bal_5i>7UNi[MGGF0@mK1
-!i10b 1
-Etb_ripple_adder
-Z31 w1536233722
-Z32 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
-R2
-R3
-R4
-Z33 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd
-Z34 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd
-l0
-L6
-V6X2XXRNz]zahU0gZJ=@Wg1
-R7
-31
-Z35 !s108 1536239306.217000
-Z36 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd|
-Z37 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd|
-R11
-R12
-!s100 =I:4PRSODkCE4]_;BEN2N0
-!i10b 1
-Atest
-R32
-R2
-R3
-DEx4 work 15 tb_ripple_adder 0 22 6X2XXRNz]zahU0gZJ=@Wg1
-l35
-L10
-V<:ODIk>>[NJ@RFk7_nME_0
-R7
-31
 R35
 R36
 R37
 R11
 R12
-!s100 0^^g?InbKC<Ad5_RIQXb63
+!s100 ^bal_5i>7UNi[MGGF0@mK1
 !i10b 1
-Etest
-w1536239104
+Etb_ripple_adder
+Z38 w1536233722
+Z39 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
 R4
-8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd
-FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd
+Z40 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd
+Z41 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd
 l0
-L3
-VfJcR_9>MRo:G?G1BRjTo?0
-!s100 Hz>679@15nSS][4GJ`G[:3
+L6
+V6X2XXRNz]zahU0gZJ=@Wg1
+!s100 =I:4PRSODkCE4]_;BEN2N0
 R7
 31
 !i10b 1
-!s108 1536239308.169000
-!s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd|
-!s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd|
+Z42 !s108 1536266867.304000
+Z43 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd|
+Z44 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd|
 R11
 R12
+Atest
+R39
+R2
+R3
+Z45 DEx4 work 15 tb_ripple_adder 0 22 6X2XXRNz]zahU0gZJ=@Wg1
+l35
+L10
+Z46 V<:ODIk>>[NJ@RFk7_nME_0
+Z47 !s100 0^^g?InbKC<Ad5_RIQXb63
+R7
+31
+!i10b 1
+R42
+R43
+R44
+R11
+R12
+Etest
+Z48 w1536237013
+R2
+R3
+R4
+Z49 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd
+Z50 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd
+l0
+L5
+VTz;Q9N8l<51Cg0PB`?Z<R2
+R7
+31
+Z51 !s108 1536266866.331000
+Z52 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd|
+Z53 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd|
+R11
+R12
+!s100 EDR0]o8O468@[nF7<6bbh2
+!i10b 1
 Atb_gate
 R2
 R3
@@ -206,13 +259,44 @@ L7
 V4z_Gl:N3S70T>BIgf4z@k1
 R7
 31
-!s108 1536239307.950000
-!s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd|
-!s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd|
+R51
+R52
+R53
 R11
 R12
-FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd
-w1536237013
-8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd
 !s100 W^20TmJ1Q[D@2K0NKDQMd1
+!i10b 1
+Etestmux
+Z54 w1536240475
+R4
+Z55 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd
+Z56 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd
+l0
+L3
+VAXSQ6W^9[_dk1UGIn7=X82
+R7
+31
+Z57 !s108 1536266866.884000
+Z58 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd|
+Z59 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_mux.vhd|
+R11
+R12
+!s100 RiE__XQ_m9Icnh=[Il<7=3
+!i10b 1
+Atestmux
+R2
+R3
+R25
+DEx4 work 7 testmux 0 22 AXSQ6W^9[_dk1UGIn7=X82
+l19
+L4
+VIa8OkfI_]M`:zKD3:g;J81
+R7
+31
+R57
+R58
+R59
+R11
+R12
+!s100 T[?KoW?>I>0iVi3<SK?OJ3
 !i10b 1
