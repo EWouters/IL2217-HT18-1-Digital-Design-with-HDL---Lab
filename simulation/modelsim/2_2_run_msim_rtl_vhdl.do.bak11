@@ -9,12 +9,12 @@ vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ri
 vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd}
 vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd}
 vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd}
-vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Two_comp.vhd}
-vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Two_comp.vhd}
+vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/gate.vhd}
+vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd}
 
-vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd}
+vcom -93 -work work {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_gate.vhd}
 
-vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_ripple_adder
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_gate
 
 add wave *
 view structure
