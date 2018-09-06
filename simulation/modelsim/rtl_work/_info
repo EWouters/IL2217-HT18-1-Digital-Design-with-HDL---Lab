@@ -1,0 +1,219 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Stack\Courses\KTH\Courses\01 - HDL\Laboratory\Lab0\simulation\modelsim
+Efull_adder
+Z1 w1536231540
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\Stack\Courses\KTH\Courses\01 - HDL\Laboratory\Lab0\simulation\modelsim
+Z5 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd
+Z6 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd
+l0
+L5
+V<NcJhmhXVK[GN]UAdYP?m0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1536231563.038000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd|
+Z10 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Full_Adder.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 ekfZ92F3FV^]=K@ZEmP4S3
+!i10b 1
+Abehaviour
+R2
+R3
+DEx4 work 10 full_adder 0 22 <NcJhmhXVK[GN]UAdYP?m0
+l17
+L16
+VQBzLfW8jLB:7Rk00l:aBf2
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 EXo8PAG8BIafk^m3^DhWF0
+!i10b 1
+Eripple_adder
+Z13 w1536231231
+R2
+R3
+R4
+Z14 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd
+Z15 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd
+l0
+L5
+Vg66dJAVzz2fZlOnUn`HJ:1
+R7
+31
+Z16 !s108 1536231562.743000
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd|
+Z18 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Ripple_Adder.vhd|
+R11
+R12
+!s100 j1<ilYcbU``n=2KN:kzia3
+!i10b 1
+Abehaviour
+R2
+R3
+DEx4 work 12 ripple_adder 0 22 g66dJAVzz2fZlOnUn`HJ:1
+l31
+L17
+VH5n8XfIegTXGiJA>RIZG11
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 i[zdlPeb=<ZZDQhGalm;<1
+!i10b 1
+Etb_full_adder
+Z19 w1536231336
+R2
+R3
+R4
+Z20 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd
+Z21 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd
+l0
+L5
+V;D_MSMCBKOnQC__gOcUIa2
+!s100 kLi`6VaBfi@C[RX]a<Ad81
+R7
+31
+!i10b 1
+Z22 !s108 1536231563.791000
+Z23 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd|
+Z24 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Full_Adder.vhd|
+R11
+R12
+Atest
+R2
+R3
+Z25 DEx4 work 13 tb_full_adder 0 22 ;D_MSMCBKOnQC__gOcUIa2
+l30
+L9
+Z26 VmdiHRG=I:hcZ9XAD7ECMW3
+Z27 !s100 ^bal_5i>7UNi[MGGF0@mK1
+R7
+31
+!i10b 1
+R22
+R23
+R24
+R11
+R12
+Etb_ripple_adder
+Z28 w1535615929
+Z29 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z30 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd
+Z31 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd
+l0
+L6
+V6X2XXRNz]zahU0gZJ=@Wg1
+R7
+31
+Z32 !s108 1536231562.202000
+Z33 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd|
+Z34 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Ripple_Adder.vhd|
+R11
+R12
+!s100 =I:4PRSODkCE4]_;BEN2N0
+!i10b 1
+Atest
+R29
+R2
+R3
+DEx4 work 15 tb_ripple_adder 0 22 6X2XXRNz]zahU0gZJ=@Wg1
+l33
+L10
+VU9g>fUa5eQM>@LWKbAIn>3
+R7
+31
+R32
+R33
+R34
+R11
+R12
+!s100 @L[mSzoACMJhAjH4`YGOc2
+!i10b 1
+Etb_two_comp
+Z35 w1536228904
+R29
+R2
+R3
+R4
+Z36 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Two_comp.vhd
+Z37 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Two_comp.vhd
+l0
+L6
+V=VbO@I:b?d3@7FbgRjTOQ0
+R7
+31
+Z38 !s108 1536231563.309000
+Z39 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Two_comp.vhd|
+Z40 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/tb_Two_comp.vhd|
+R11
+R12
+!s100 F3Mld5CQ3D8G3Tgc:a7m>2
+!i10b 1
+Atest
+R29
+R2
+R3
+DEx4 work 11 tb_two_comp 0 22 =VbO@I:b?d3@7FbgRjTOQ0
+l27
+L10
+V7iz0^cHOY`cLoBXWbfaoG3
+R7
+31
+R38
+R39
+R40
+R11
+R12
+!s100 :U3;DkCPnLWJWN3;AJOn?1
+!i10b 1
+Etwo_comp
+Z41 w1536228138
+R2
+R3
+R4
+Z42 8D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Two_comp.vhd
+Z43 FD:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Two_comp.vhd
+l0
+L5
+V49CMc?moc@RVYh<QbW:aW1
+R7
+31
+Z44 !s108 1536231563.570000
+Z45 !s90 -reportprogress|300|-93|-work|work|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Two_comp.vhd|
+Z46 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab0/Two_comp.vhd|
+R11
+R12
+!s100 0@YabNBLHdijfL41=TgFo0
+!i10b 1
+Abehaviour
+R2
+R3
+DEx4 work 8 two_comp 0 22 49CMc?moc@RVYh<QbW:aW1
+l15
+L14
+VdEdInnVAd`S1<GmRMiDZ33
+R7
+31
+R44
+R45
+R46
+R11
+R12
+!s100 Oo7fl5c>RV`jPg13]:=G83
+!i10b 1
