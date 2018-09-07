@@ -6,10 +6,11 @@ ENTITY tb_gate IS END tb_gate;
 
 ARCHITECTURE tb_gate OF tb_gate IS
 	COMPONENT gate
-	PORT (
-		a:IN std_logic;
-		b:IN std_logic;
-		q:OUT std_logic);
+		PORT (
+			a:IN std_logic;
+			b:IN std_logic;
+			q:OUT std_logic
+		);
 	END COMPONENT;
 	
 	SIGNAL a,b,q:std_logic;

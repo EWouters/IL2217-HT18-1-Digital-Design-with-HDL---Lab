@@ -2,9 +2,22 @@ library IEEE;
 use ieee.std_logic_1164.all;
 use work.all;
 
+--ENTITY addsub IS
+--	GENERIC (size: INTEGER);
+--	PORT(
+--		a: IN bit_vector(size-1 downto 0);
+--		b: IN bit_vector(size-1 downto 0);
+--		cin:IN bit;
+--		sub: IN bit; -- sub = 0 => addition; sub = 1 => subtraktion
+--		q:OUT bit_vector(size-1 downto 0);
+--		cout:OUT bit
+--	);
+--END addsub;
+
+
 ENTITY Ripple_Adder IS
 	GENERIC(N: INTEGER:=4);
-	PORT (
+	PORT(
 			A   : IN  std_logic_vector(N downto 0);
 			B   : IN  std_logic_vector(N downto 0);
 			Cin : IN  std_logic;

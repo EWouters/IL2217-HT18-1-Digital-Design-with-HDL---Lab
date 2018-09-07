@@ -1,3 +1,5 @@
+library IEEE;
+use ieee.std_logic_1164.all;
 USE work.ALL;
 
 ENTITY tb_mux IS END tb_mux;
@@ -5,15 +7,15 @@ ENTITY tb_mux IS END tb_mux;
 ARCHITECTURE testMux OF tb_mux IS
 COMPONENT mux
 	PORT (
-		a:IN BIT;
-		b:IN BIT;
-		adress:IN BIT;
-		q:OUT BIT
+		a:IN std_logic;
+		b:IN std_logic;
+		adress:IN std_logic;
+		q:OUT std_logic
 	);
 END COMPONENT;
 
-SIGNAL testvector:BIT_VECTOR (2 downto 0); -- a, b, adress
-SIGNAL gateResult,dfResult:BIT;
+SIGNAL testvector:std_logic_VECTOR (2 downto 0); -- a, b, adress
+SIGNAL gateResult,dfResult:std_logic;
 
 FOR c1:mux USE ENTITY work.mux(dataflow);
 FOR c2:mux USE ENTITY work.mux(behavioural);
