@@ -19,8 +19,13 @@ END behavioural;
 ARCHITECTURE dataflow OF mux IS
 	SIGNAL int1,int2,int_adress: std_logic;
 BEGIN
-	q <= int1 OR int2;
-	int1 <= b and adress;
+--	q <= int1 OR int2;
+--	int1 <= b and adress;
+--	int_adress <= NOT adress;
+--	int2 <= int_adress AND a;
+	
 	int_adress <= NOT adress;
+	int1 <= b and adress;
 	int2 <= int_adress AND a;
+	q <= int1 OR int2;
 END dataflow;

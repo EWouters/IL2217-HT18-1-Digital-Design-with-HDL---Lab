@@ -8,6 +8,7 @@ ENTITY tb_ALU IS END tb_ALU;
 
 ARCHITECTURE ALUTest OF tb_ALU IS
 	constant width : INTEGER := 8;
+	constant size : INTEGER := width;
 	SIGNAL a,b,q:std_logic_vector(width-1 downto 0);
 	SIGNAL ctrl:std_logic_vector (1 DOWNTO 0);
 	SIGNAL cout,cin:std_logic:='0';
@@ -78,11 +79,11 @@ BEGIN
 					-- the messaege "wrong result from ALU"
 					-- displayed in ModelSim EE window.
 					ASSERT q = res
-					REPORT "wrong result from ALU"
-					SEVERITY warning;
+						REPORT "wrong result from ALU"
+						SEVERITY warning;
 					ASSERT cout = c
-					REPORT "wrong carry from ALU"
-					SEVERITY warning;
+						REPORT "wrong carry from ALU"
+						SEVERITY warning;
 				END LOOP;
 			END LOOP;
 		END LOOP;

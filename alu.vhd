@@ -47,6 +47,8 @@ ARCHITECTURE Behaviour OF alu IS
 	SIGNAL q_nor: std_logic_vector(size-1 downto 0);
 	SIGNAL q_addSub: std_logic_vector(size-1 downto 0);
 	SIGNAL add_cin   : std_logic;
+	SIGNAL cout_gate   : std_logic;
+	SIGNAL cout_addSub   : std_logic;
 	SIGNAL sub : std_logic;
 	
 --SIGNAL testvector:std_logic_VECTOR (2 downto 0); -- a, b, adress
@@ -56,7 +58,7 @@ ARCHITECTURE Behaviour OF alu IS
 
 BEGIN
 	gen_gate: 
-	FOR i IN 1 TO size-1 GENERATE gate_x: gate
+	FOR i IN 0 TO size-1 GENERATE gate_x: gate
 		PORT MAP(
 			A => A(i),
 			B => B(i),
@@ -64,7 +66,7 @@ BEGIN
 		);
 	END GENERATE;
 	
---	gen_nor: 
+--	gen_nor:
 --	FOR i IN 1 TO size-1 GENERATE nor_x: nand
 --		PORT MAP(
 --			A => A(i),
@@ -83,7 +85,7 @@ BEGIN
 			Cin   => add_cin,
 			sub => sub,
 			q   => q_addsub,
-			Cout  => cout
+			Cout  => cout_addSub
 		);
 
 --	gen_muxA:
@@ -97,23 +99,41 @@ BEGIN
 
 	add_cin <= '0';
 
-	process(ctrl, a, b) is
-	begin
-		case ctrl is
-			when "00" =>
-				sub <= '0';
-				q <= q_addSub;
-			when "01" =>
-				sub <= '1';
-				q <= q_addSub;
-			when "10" =>
-				q <= q_gate;
-			when "11" =>
-				q <= q_gate;
-			when others =>
-				assert false;
-		end case;
-	end process;
+--	process(ctrl, a, b) is
+--	begin
+--		case ctrl is
+--			when "00" =>
+--				sub <= '0';
+--				q <= q_addSub;
+--			when "01" =>
+--				sub <= '1';
+--				q <= q_addSub;
+--			when "10" =>
+--				q <= q_gate;
+--			when "11" =>
+--				q <= A NOR B;
+--			when others =>
+--				assert false;
+--		end case;
+--	end process;
+
+	with ctrl select q <=
+		q_addSub when "00",
+		q_addSub when "01",
+--		q_gate when "10",
+		A NAND B when "10",
+		A NOR B when "11",
+		(others=>'X') when others;
+		
+	with ctrl select cout <=
+		cout_addSub when "00",
+		cout_addSub when "01",
+		'0' when "10",
+		'0' when "11",
+		'X' when others;
+		
+	sub <= ctrl(0);
+
 
 
 			
