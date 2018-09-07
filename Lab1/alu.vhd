@@ -43,7 +43,7 @@ ARCHITECTURE Behaviour OF alu IS
 		);
 	END COMPONENT;
 
-	SIGNAL q_gate: std_logic_vector(size-1 downto 0);
+--	SIGNAL q_gate: std_logic_vector(size-1 downto 0);
 	SIGNAL q_nor: std_logic_vector(size-1 downto 0);
 	SIGNAL q_addSub: std_logic_vector(size-1 downto 0);
 	SIGNAL add_cin   : std_logic;
@@ -57,14 +57,14 @@ ARCHITECTURE Behaviour OF alu IS
 --	FOR c1:mux USE ENTITY work.mux(dataflow);
 
 BEGIN
-	gen_gate: 
-	FOR i IN 0 TO size-1 GENERATE gate_x: gate
-		PORT MAP(
-			A => A(i),
-			B => B(i),
-			Q => q_gate(i)
-		);
-	END GENERATE;
+--	gen_gate: 
+--	FOR i IN 0 TO size-1 GENERATE gate_x: gate
+--		PORT MAP(
+--			A => A(i),
+--			B => B(i),
+--			Q => q_gate(i)
+--		);
+--	END GENERATE;
 	
 --	gen_nor:
 --	FOR i IN 1 TO size-1 GENERATE nor_x: nand
