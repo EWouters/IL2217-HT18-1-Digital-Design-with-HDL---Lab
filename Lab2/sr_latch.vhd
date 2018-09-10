@@ -17,8 +17,8 @@ architecture DATAFLOW of SR_LATCH is
 	signal QPRIM_INT	:	std_logic := '0';
 	signal Q_INT		:	std_logic := '0';
 begin
-	Q_INT		<=	S and QPRIM_INT;
-	QPRIM_INT	<=	R and Q_INT;
+	Q_INT		<=	S AND QPRIM_INT;
+	QPRIM_INT	<=	R AND Q_INT;
 	Q			<=	Q_INT;
 	QPRIM		<=	QPRIM_INT;
 end DATAFLOW;

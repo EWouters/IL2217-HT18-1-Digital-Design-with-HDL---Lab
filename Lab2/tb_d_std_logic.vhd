@@ -16,7 +16,7 @@ architecture TEST of TB_D_STD_LOGIC is
 		port (
 			D		:	in std_logic;
 			CLK		:	in std_logic;
-			Q		:	in std_logic
+			Q		:	out std_logic
 		);
 	end component;
 
