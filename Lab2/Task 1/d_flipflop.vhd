@@ -14,7 +14,8 @@ architecture BEHAVIORAL of D_FLIPFLOP is
 begin
 	process (CLK, D)
 	begin
-		if (CLK = '1' and rising_edge(CLK)) then	-- rising_edge is compatible with std_logic
+--		if (CLK = '1' and rising_edge(CLK)) then	-- rising_edge is compatible with std_logic
+		if (rising_edge(CLK)) then	-- rising_edge is compatible with std_logic
 			Q	<=	D;
 		end if;
 	end process;
