@@ -2,9 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_signed.all;
 
-entity TB_COUNTER_SIG is end TB_COUNTER_SIG;  --make sure the entity name matches the file name 
+entity TEST is end TEST;
 
-architecture ARCH_TB_COUNTER_SIG of TB_COUNTER_SIG is
+architecture TB_COUNTER_SIG of TEST is
 	component COUNTER_SIG
 	port (UP, CLK, RESET	:	in std_logic;
 		OUT1	:	out	std_logic;
