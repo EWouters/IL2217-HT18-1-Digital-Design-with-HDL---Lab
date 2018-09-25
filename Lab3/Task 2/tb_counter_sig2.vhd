@@ -7,6 +7,7 @@
 Library IEEE;
 use IEEE.std_logic_1164.ALL;
 use IEEE.std_logic_signed.ALL;
+use work.all;
 
 entity tb_counter_sig2 is end tb_counter_sig2;
 
@@ -14,7 +15,7 @@ architecture arch_tb_counter_sig2 of tb_counter_sig2 is
 	component counter_sig
 	port( UP, CLK, RESET : in std_logic;
 		OUT1 : out std_logic;
-		OUT2 : out std_logic_vector(2 downto 0)
+		OUT2 : out std_logic_vector(3 downto 0)
 	);
 	end component;
 
@@ -22,7 +23,7 @@ architecture arch_tb_counter_sig2 of tb_counter_sig2 is
 	signal RESET : std_logic := '0';
 	signal CLK : std_logic := '0';
 	signal OUT1 : std_logic;
-	signal OUT2 : std_logic_vector(2 downto 0);
+	signal OUT2 : std_logic_vector(3 downto 0);
 
 	for U1: counter_sig use entity
 		work.counter_sig(Arch_counter_sig2);

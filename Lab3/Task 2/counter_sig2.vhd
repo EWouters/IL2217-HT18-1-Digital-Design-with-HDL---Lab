@@ -3,6 +3,9 @@
 -- File Name: counter_sig2.vhd
 ---------------------------------------------------------
 ---
+
+use work.all;
+
 architecture Arch_counter_sig2 of counter_sig is
 	signal COUNT : std_logic_vector(3 downto 0);
 begin

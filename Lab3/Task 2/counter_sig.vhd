@@ -8,6 +8,7 @@
 Library IEEE;
 use IEEE.std_logic_1164.ALL;
 use IEEE.std_logic_signed.ALL;
+use work.all;
 
 entity counter_sig is
 	port( UP, CLK, RESET : in std_logic;
