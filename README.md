@@ -7,3 +7,7 @@ The goal of this laboration is to familiarize the students with describing combi
 ## Lab 2
 
 This laboration deals with Sequential Logic and the VHDL modelling of databuses. This introduces Modelling of Flip-flops and registers, and the issue of drivers for digital buses. Two new VHDL constructs: PACKAGE and RESOLUTION FUNCTION are introduced.
+
+## Lab 3
+
+This laboration deals with VHDL modelling of Finite State Machines (FSMs).
