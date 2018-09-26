@@ -8,13 +8,14 @@ architecture Arch_counter_var of counter_sig is
 begin
 -----------------------------------------------------
 	process (CLK, RESET)
+--	process (RESET)
 		variable COUNT : std_logic_vector(3 downto 0);
 	begin
 		if RESET = '0' then
 			COUNT := (others=>'0');
 			OUT1 <= '0';
 			OUT2 <= (others=>'0');
-		elsif clk'event AND clk='1' then
+		elsif clk'event AND clk='1' and EN='1' then
 			case UP is
 				when '1' => COUNT:=COUNT+1;
 				when others=> COUNT:=COUNT-1;
