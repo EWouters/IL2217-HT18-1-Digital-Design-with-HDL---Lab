@@ -1,0 +1,19 @@
+quit -sim;
+vsim -gui work.test(tb_videocomposer);
+
+add wave -position insertpoint \
+sim:/test/clk \
+sim:/test/reset \
+sim:/test/Start \
+sim:/test/Ready \
+sim:/test/q \
+sim:/test/ramAdr \
+sim:/test/read_from_file \
+sim:/test/DUT/U2/address \
+sim:/test/DUT/U2/data \
+sim:/test/DUT/U2/we \
+sim:/test/DUT/U2/q \
+sim:/test/DUT/U2/mem \
+sim:/test/DUT/U2/int_address \
+sim:/test/DUT/U2/dump_ppm;
+run 2 ms;
