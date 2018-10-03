@@ -37,9 +37,9 @@ ARCHITECTURE behaviour OF videoComposer_FSMD IS
 		  --
 		  -- instructions to manage blue color...
 		  ('0',	R3,	R3,	R3,	 OpAnd,  OpShiftL,	'0'), -- S_ShiftL_Blue
-		  ('0',	R3,	R3,	R3,	 OpAnd,  OpPass,	'0'), -- S_ShiftL_Blue
+		  ('0',	R3,	R3,	R3,	 OpAnd,  OpPass,	'0'), -- S_Sat_Blue
 
-		  ('0',	R3,	Rx,	Rx,	 OpInv,  OpPass,	'0'), -- S_ShiftL_Blue
+		  ('0',	R3,	Rx,	Rx,	 OpInv,  OpPass,	'0'), -- S_Sat_Blue
 		  --
 		  ('0',	Rx,	R3,	R3,	 OpAnd,  OpPass,	'1'), -- S_WriteBlue
 		  ('0',	Rx,	Rx,	Rx,	 OpAnd,  OpPass,	'0')  --S _Idle
@@ -106,20 +106,20 @@ BEGIN
 				next_WE<='1'; 
 			WHEN S_ReadBlueWriteGreen => -- ROM Instr 3
 				next_WE<='0'; --<='0'; if you add states for processing the blue color
-				next_counter <= 4;
-				next_state   <= S_ProcessBlue0; --S_WriteBlue;
+	--			next_counter <= 4;
+	--			next_state   <= S_ProcessBlue0; --S_WriteBlue;
 				next_read_address<=read_address+1;
 				next_write_address<=write_address+1;
 			-- ...
 			-- states to manage blue color...
-			WHEN S_ProcessBlue0 =>
+	--		WHEN S_ProcessBlue0 =>
 				IF (DataIn(7)='1') THEN
-					next_WE<='1'; 
+	--				next_WE<='0'; 
 					next_counter <= 6;
 					next_state   <= S_SatBlue; --S_ProcessBlue;
 				ELSE
-					next_WE<='0'; 
-					next_counter <= 5;
+	--				next_WE<='0'; 
+					next_counter <= 4;
 					next_state   <= S_ProcessBlue;
 				END IF;
 			WHEN S_SatBlue => -- ROM Instr 5
