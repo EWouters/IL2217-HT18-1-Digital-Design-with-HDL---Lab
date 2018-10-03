@@ -28,9 +28,9 @@ begin
 	   data_in:=conv_integer(unsigned(data));
 	   IF (WE='1') THEN
 	      mem(int_address):=data_in;
+		  q<=conv_std_logic_vector(mem(int_address),8); -- Moved inside process
 	   END IF;
 	END PROCESS;
-	q<=conv_std_logic_vector(mem(int_address),8);
 
 	dump_ppm<=work.ppm_file_handler.dump_ppm;
 	PROCESS(dump_ppm)
