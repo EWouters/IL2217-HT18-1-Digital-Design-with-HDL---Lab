@@ -9,7 +9,7 @@ USE IEEE.std_logic_1164.all;
 USE IEEE.std_logic_signed.all;
 USE IEEE.std_logic_arith.all;
 
-ENTITY VideoComposer_FSMD IS
+ENTITY Video_Composer_FSMD IS
 	PORT (
 		Clk          : IN  STD_LOGIC;
 		Reset        : IN  STD_LOGIC;
@@ -24,9 +24,9 @@ ENTITY VideoComposer_FSMD IS
 		RAM_WE	: OUT STD_LOGIC;
 		DataOut      : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
-END VideoComposer_fsmd;
+END Video_Composer_fsmd;
 
-ARCHITECTURE behaviour OF videoComposer_FSMD IS
+ARCHITECTURE behaviour OF video_Composer_FSMD IS
 
 	CONSTANT ROM : Program_Type := (
 		--| IE  | Dest | Src1 | Src2 | OpAlu | OpShift | OE  |

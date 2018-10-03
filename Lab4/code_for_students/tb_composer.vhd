@@ -2,16 +2,16 @@ USE WORK.ALL;
 USE WORK.ppm_file_handler.ALL;
 
 LIBRARY IEEE;
-USE IEEE.std_logic_1164.all; 
-ENTITY test IS END test;
+USE IEEE.std_logic_1164.all;
 
-ARCHITECTURE tb_VideoComposer OF test IS
+ENTITY test_tb_VideoComposer IS END test_tb_VideoComposer;
+
+ARCHITECTURE tb_VideoComposer OF test_tb_VideoComposer IS
 
    COMPONENT VideoComposer
 	PORT (
 		Clk          : IN  STD_LOGIC;
 		Reset        : IN  STD_LOGIC;
-
 		Start		 : IN STD_LOGIC;
 		Ready		 : OUT STD_LOGIC;
 		q		 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
