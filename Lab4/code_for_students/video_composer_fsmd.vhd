@@ -63,7 +63,7 @@ ARCHITECTURE behaviour OF videoComposer_FSMD IS
 	SIGNAL OutPort     : STD_LOGIC_VECTOR(Size-1 DOWNTO 0);
 	SIGNAL instr : Instruction_type := ( '0' , Rx   , Rx   , Rx   , OpX   , OpX     , '0' );
 
-	TYPE   State_Type IS (reset_state,S_ReadRed, S_ReadGreenWriteRed, S_ReadBlueWriteGreen, S_SatBlue, S_ProcessBlue0, S_ProcessBlue, S_ProcessBlue1, S_WriteBlue, S_Idle);
+	TYPE   State_Type IS (reset_state,S_ReadRed, S_ReadGreenWriteRed, S_ReadBlueWriteGreen, S_SatBlue, S_ProcessBlue0, S_ProcessBlue1, S_ProcessBlue2, S_ProcessBlue3, S_WriteBlue, S_Idle);
 
 	SIGNAL current_state,   next_state   : State_Type;
 	-- Instr counter for the datapath
@@ -112,28 +112,33 @@ BEGIN
 				next_write_address<=write_address+1;
 			-- ...
 			-- states to manage blue color...
-	--		WHEN S_ProcessBlue0 =>
-				IF (DataIn(7)='1') THEN
-	--				next_WE<='0'; 
+				IF (DataIn(7)='1' OR DataIn(6)='1') THEN
 					next_counter <= 6;
 					next_state   <= S_SatBlue; --S_ProcessBlue;
 				ELSE
-	--				next_WE<='0'; 
 					next_counter <= 4;
-					next_state   <= S_ProcessBlue;
+					next_state   <= S_ProcessBlue0;
 				END IF;
-			WHEN S_SatBlue => -- ROM Instr 5
-				next_WE<='1'; 
+			WHEN S_SatBlue => -- ROM Instr 6
+				next_WE<='1';
 				next_counter <= 7;
 				next_state   <= S_WriteBlue;
-			WHEN S_ProcessBlue => -- ROM Instr 4
-				next_WE<='0'; 
+			WHEN S_ProcessBlue0 => -- ROM Instr 4
+	--			next_WE<='0'; 
 				next_counter <= 5;
 				next_state   <= S_ProcessBlue1;
 			WHEN S_ProcessBlue1 => -- ROM Instr 5
+	--			next_WE<='0'; 
+				next_counter <= 4;
+				next_state   <= S_ProcessBlue2;
+			WHEN S_ProcessBlue2 => -- ROM Instr 5
+	--			next_WE<='0';
+				next_counter <= 5;
+				next_state   <= S_ProcessBlue3;
+			WHEN S_ProcessBlue3 => -- ROM Instr 5
 				next_WE<='1'; 
 				next_counter <= 7;
-				next_state   <= S_WriteBlue; --S_ProcessBlue;
+				next_state   <= S_WriteBlue;
 			-- ...
 			WHEN S_WriteBlue  => -- ROM Instr 10 or 11
 				next_WE<='0';

@@ -17,7 +17,7 @@ L5
 V5YE:h7]4QBci5h9>P7I2N3
 Z8 OV;C;10.1d;51
 32
-Z9 !s108 1538582886.919000
+Z9 !s108 1538586106.318000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ALU.vhd|
 Z11 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ALU.vhd|
 Z12 o-work work -2002 -explicit -O0
@@ -57,7 +57,7 @@ L8
 V3XzY`KmSXXOU@T3[K]U8F3
 R8
 32
-Z18 !s108 1538582887.304000
+Z18 !s108 1538586106.611000
 Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/data_path.vhd|
 Z20 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/data_path.vhd|
 R12
@@ -99,7 +99,7 @@ R12
 R13
 !s100 W6W9LL_fCFiobHJMS20R@3
 !i10b 1
-!s108 1538582887.589000
+!s108 1538586106.858000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/package_MicroAssemblyCode.vhd|
 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/package_MicroAssemblyCode.vhd|
 Pppm_file_handler
@@ -116,7 +116,7 @@ VQSl6fOVa`dhd2XJeWV6e=3
 R8
 32
 b1
-Z24 !s108 1538582887.832000
+Z24 !s108 1538586107.012000
 Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ppm_file_handler.vhd|
 Z26 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ppm_file_handler.vhd|
 R12
@@ -156,7 +156,7 @@ L6
 Va[MiA?>=;iJk?hK7E5l]f1
 R8
 32
-Z32 !s108 1538582888.175000
+Z32 !s108 1538586107.212000
 Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/RegFile.vhd|
 Z34 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/RegFile.vhd|
 R12
@@ -194,7 +194,7 @@ L4
 VVUBLi>=`PNMnf3=WmgZ;K3
 R8
 32
-Z38 !s108 1538582888.584000
+Z38 !s108 1538586107.444000
 Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Selector.vhd|
 Z40 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Selector.vhd|
 R12
@@ -231,7 +231,7 @@ L5
 V:>FG::QPFUQ<XCCP5^WYb0
 R8
 32
-Z44 !s108 1538582888.923000
+Z44 !s108 1538586107.676000
 Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Shifter.vhd|
 Z46 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Shifter.vhd|
 R12
@@ -270,7 +270,7 @@ L6
 Vc8nFz8ikVG5a^maLQVd<D0
 R8
 32
-Z50 !s108 1538582889.308000
+Z50 !s108 1538586107.916000
 Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/single_port_ram.vhd|
 Z52 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/single_port_ram.vhd|
 R12
@@ -309,7 +309,7 @@ L6
 V<C=RYI1EQGdO^BI<BLG>W0
 R8
 32
-Z56 !s108 1538582889.656000
+Z56 !s108 1538586108.217000
 Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/single_port_rom.vhd|
 Z58 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/single_port_rom.vhd|
 R12
@@ -348,7 +348,7 @@ L6
 VbPGEeCWLDEH]]E94IfB2h3
 R8
 32
-Z62 !s108 1538582890.474000
+Z62 !s108 1538586108.649000
 Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/test.vhd|
 Z64 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/test.vhd|
 R12
@@ -426,7 +426,7 @@ L7
 Vi0OYYTgS`101V>@Y=[_7G3
 R8
 32
-Z74 !s108 1538582890.832000
+Z74 !s108 1538586108.887000
 Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/video_composer.vhd|
 Z76 !s107 D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/video_composer.vhd|
 R12
@@ -493,7 +493,7 @@ R13
 !s100 7K<`?EU74JdCJJi1YSEY^0
 !i10b 1
 Evideocomposer_fsmd
-Z83 w1538582880
+Z83 w1538586084
 R1
 R2
 R3
@@ -509,7 +509,7 @@ Vn67PeM=EYmT0:KbQITn>;3
 R8
 32
 !i10b 1
-Z84 !s108 1538582891.213000
+Z84 !s108 1538586109.256000
 R81
 Z85 !s107 D:\Stack\Courses\KTH\Courses\01 - HDL\Laboratory\Lab\Lab4\code_for_students\video_composer_fsmd.vhd|
 R12
@@ -523,8 +523,8 @@ R15
 Z86 DEx4 work 18 videocomposer_fsmd 0 22 n67PeM=EYmT0:KbQITn>;3
 l75
 L29
-VF0`=kR^mK7UW5a>JOh<@>0
-!s100 ;M=c2n:;HlG8[^F0]P@E^3
+VeJa]aH[9=3Qa_GodBzLMa3
+!s100 UnbGZhGf0mi]Sc7WTCOCL1
 R8
 32
 !i10b 1
