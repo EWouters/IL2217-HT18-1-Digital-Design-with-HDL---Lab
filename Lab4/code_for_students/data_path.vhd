@@ -2,8 +2,8 @@ Library IEEE;
 use IEEE.std_logic_1164.ALL;
 use IEEE.std_logic_signed.ALL;
 
-Library datapath_lib;
-use datapath_lib.package_microassemblycode.all;
+Library work;
+use work.package_microassemblycode.all;
 
 ENTITY dataPath IS
 	GENERIC (

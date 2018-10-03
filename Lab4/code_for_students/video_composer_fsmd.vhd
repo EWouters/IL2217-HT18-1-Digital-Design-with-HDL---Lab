@@ -1,15 +1,15 @@
 USE WORK.ALL;
 
-LIBRARY DATAPATH_LIB;
-USE DATAPATH_LIB.all;
-USE DATAPATH_LIB.package_MicroAssemblyCode.ALL;
+LIBRARY work;
+USE work.all;
+USE work.package_MicroAssemblyCode.ALL;
 
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 USE IEEE.std_logic_signed.all;
 USE IEEE.std_logic_arith.all;
 
-ENTITY Video_Composer_FSMD IS
+ENTITY VideoComposer_FSMD IS
 	PORT (
 		Clk          : IN  STD_LOGIC;
 		Reset        : IN  STD_LOGIC;
@@ -24,9 +24,9 @@ ENTITY Video_Composer_FSMD IS
 		RAM_WE	: OUT STD_LOGIC;
 		DataOut      : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
-END Video_Composer_fsmd;
+END VideoComposer_fsmd;
 
-ARCHITECTURE behaviour OF video_Composer_FSMD IS
+ARCHITECTURE behaviour OF videoComposer_FSMD IS
 
 	CONSTANT ROM : Program_Type := (
 		--| IE  | Dest | Src1 | Src2 | OpAlu | OpShift | OE  |

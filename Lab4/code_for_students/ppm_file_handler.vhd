@@ -57,7 +57,7 @@ package body ppm_file_handler is
 		VARIABLE buf  : STRING(1 DOWNTO 1); 
 				-- The read character, i.e., one char of the string.
 		VARIABLE len  : INTEGER;
-				-- A ï¿½dummyï¿½ var. for getting the READ syntax right
+				-- A “dummy” var. for getting the READ syntax right
 		VARIABLE char : CHARACTER;              -- A temporary character
 		VARIABLE int  : INTEGER RANGE 0 TO 255;
 				-- The integer value of the read ASCII character
@@ -65,14 +65,8 @@ package body ppm_file_handler is
 		VARIABLE state    : INTEGER := 0;
 	BEGIN
     		LOOP
-			
-			
-			if char_count >= (ppm_header'high - 1) then
-				exit;
-			end if;
-			
 			READ(FileIn, buf, len);           -- Read 1 character from the input file
-			--WRITE(FileOut, buf);            -- Write the character char to the output file
+			--WRITE(FileOut, buf);              -- Write the character char to the output file
 			Header(char_count):=buf(1);
 			char_count:=char_count+1;
 			char := buf(1);                   -- Extraction of curr. read character
@@ -122,8 +116,8 @@ package body ppm_file_handler is
 		VARIABLE buf  : STRING(1 DOWNTO 1);     -- The read character i.e. one char of the string.
 	BEGIN
 	   For i in 0 to Header_length-1 loop
-			-- buf(1) := Header(i);
-			WRITE(FileOut,Header(i));
+		-- buf(1) := Header(i);
+		WRITE(FileOut,Header(i));
 	   end loop;
 	END WriteHeader;
 
@@ -134,7 +128,7 @@ package body ppm_file_handler is
 	) IS
 
 		VARIABLE buf  : STRING(1 DOWNTO 1);     -- The read character i.e. one char of the string.
-		VARIABLE len  : INTEGER;                -- A ï¿½dummyï¿½ var. for getting the READ syntax right
+		VARIABLE len  : INTEGER;                -- A “dummy” var. for getting the READ syntax right
 		VARIABLE char : CHARACTER;              -- A temporary character
 		VARIABLE int  : INTEGER RANGE 0 TO 255; -- The integer value of a the read ASCII character
 

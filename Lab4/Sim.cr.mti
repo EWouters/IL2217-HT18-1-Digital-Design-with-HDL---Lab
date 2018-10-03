@@ -1,0 +1,121 @@
+{D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ALU.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ALU.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity ALU
+-- Compiling architecture behavioral of ALU
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/data_path.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/data_path.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package package_MicroAssemblyCode
+-- Compiling entity dataPath
+-- Compiling architecture behavioral of dataPath
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/video_composer.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/video_composer.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity video_composer
+-- Compiling architecture structure of video_composer
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/RegFile.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/RegFile.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity RegFile
+-- Compiling architecture behavioral of RegFile
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/video_composer_fsmd.vhd} {1 {vcom -work work -2002 -explicit {D:\Stack\Courses\KTH\Courses\01 - HDL\Laboratory\Lab\Lab4\code_for_students\video_composer_fsmd.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package package_MicroAssemblyCode
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity VideoComposer_FSMD
+-- Compiling architecture behaviour of videoComposer_FSMD
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/package_MicroAssemblyCode.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/package_MicroAssemblyCode.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package package_MicroAssemblyCode
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/test.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/test.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package ppm_file_handler
+-- Compiling entity test
+-- Compiling architecture tb_VideoComposer of test
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ppm_file_handler.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/ppm_file_handler.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling package ppm_file_handler
+-- Compiling package body ppm_file_handler
+-- Loading package ppm_file_handler
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Selector.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Selector.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Selector
+-- Compiling architecture behavioral of Selector
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Shifter.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/Shifter.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Compiling entity Shifter
+-- Compiling architecture behavioral of Shifter
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/single_port_ram.vhd} {2 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/single_port_ram.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package ppm_file_handler
+-- Compiling entity single_port_ram
+-- Compiling architecture write_ppm of single_port_ram
+** Warning: D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/single_port_ram.vhd(20): (vcom-1236) Shared variables must be of a protected type.
+
+
+} {} {}} {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/tb_composer.vhd} {1 {vcom -work work -2002 -explicit {D:/Stack/Courses/KTH/Courses/01 - HDL/Laboratory/Lab/Lab4/code_for_students/tb_composer.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package ppm_file_handler
+-- Compiling entity test
+-- Compiling architecture tb_VideoComposer of test
+
+} {} {}}
