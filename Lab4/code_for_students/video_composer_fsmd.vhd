@@ -30,23 +30,23 @@ ARCHITECTURE behaviour OF videoComposer_FSMD IS
 
 	CONSTANT ROM : Program_Type := (
 		--| IE  | Dest | Src1 | Src2 | OpAlu | OpShift | OE  |
-		  ('0',	R0, R0, R0,  OpXor,  OpPass, 	'0'), -- Reset_State
-		  ('1',	R1,	Rx,	Rx,	 OpXor,  OpPass,	'0'), -- S_Read_Red
-		  ('1',	R2,	R1,	R1,	 OpAnd,  OpPass,	'1'), -- S_WriteRed_ReadGreen
-		  ('1',	R3,	R2,	R2,	 OpAnd,  OpPass,	'1'), -- S_WriteGreen_ReadBlue
+		  ('0',	R0, R0, R0,  OpXor,  OpPass, 	'0'), --  0 - Reset_State
+		  ('1',	R1,	Rx,	Rx,	 OpXor,  OpPass,	'0'), --  1 - S_Read_Red
+		  ('1',	R2,	R1,	R1,	 OpAnd,  OpPass,	'1'), --  2 - S_WriteRed_ReadGreen
+		  ('1',	R3,	R2,	R2,	 OpAnd,  OpPass,	'1'), --  3 - S_WriteGreen_ReadBlue
 		  --
 		  -- instructions to manage blue color...
 
-		  ('0',	R4,	Rx,	Rx,	 OpInv,  OpShiftR,	'0'), -- S0 Create Mask and Put mask in R4
+		  ('0',	R4,	Rx,	Rx,	 OpInv,  OpShiftR,	'0'), --  4 - S0 Create Mask and Put mask in R4
 		  
-		  ('0',	R4,	R3,	R4,	 OpOr,   OpRotL,	'0'), -- S1 "(mask OR I) ROTL 1" and store in R4
-		  ('0',	R4,	R4,	Rx,	 OpInc,  OpPass,	'0'), -- S2 "INC R4 by 1" and store in R4
-		  ('0',	R4,	R4,	Rx,	 OpInv,  OpPass,	'0'), -- S3 "INV R4" and store in R4
-		  ('0',	R3,	R3,	R3,	 OpX,    OpShiftL,	'0'), -- S4 "SLL R3" and store in R3
-		  ('0',	Rx,	R3,	R4,	 OpOr,   OpPass,	'1'), -- S5 "R3 OR R4" on result bus and S_WriteBlue
+		  ('0',	R4,	R3,	R4,	 OpOr,   OpRotL,	'0'), --  5 - S1 "(mask OR I) ROTL 1" and store in R4
+		  ('0',	R4,	R4,	Rx,	 OpInc,  OpPass,	'0'), --  6 - S2 "INC R4 by 1" and store in R4
+		  ('0',	R4,	R4,	Rx,	 OpInv,  OpPass,	'0'), --  7 - S3 "INV R4" and store in R4
+		  ('0',	R3,	R3,	R3,	 OpX,    OpShiftL,	'0'), --  8 - S4 "SLL R3" and store in R3
+		  ('0',	R3,	R3,	R4,	 OpOr,   OpPass,	'1'), --  9 - S5 "R3 OR R4" on result bus and S_WriteBlue
 		  --
 	--	  ('0',	Rx,	R3,	R3,	 OpAnd,  OpPass,	'1'), -- S_WriteBlue
-		  ('0',	Rx,	Rx,	Rx,	 OpAnd,  OpPass,	'0')  --S _Idle
+		  ('0',	Rx,	Rx,	Rx,	 OpAnd,  OpPass,	'0')  --  10 - S _Idle
 		);
 
 	COMPONENT dataPath
@@ -67,7 +67,7 @@ ARCHITECTURE behaviour OF videoComposer_FSMD IS
 	SIGNAL OutPort     : STD_LOGIC_VECTOR(Size-1 DOWNTO 0);
 	SIGNAL instr : Instruction_type := ( '0' , Rx   , Rx   , Rx   , OpX   , OpX     , '0' );
 
-	TYPE   State_Type IS (reset_state,S_ReadRed, S_ReadGreenWriteRed, S_ReadBlueWriteGreen, S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S_WriteBlue, S_Idle);
+	TYPE   State_Type IS (reset_state,S_ReadRed, S_ReadGreenWriteRed, S_ReadBlueWriteGreen, S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S_WriteBlue, S_Idle);
 
 	SIGNAL current_state,   next_state   : State_Type;
 	-- Instr counter for the datapath
@@ -130,21 +130,24 @@ BEGIN
 				next_state   <= S4;
 			WHEN S4 => -- ROM Instr 8
 				next_counter <= 9;
---				next_state   <= S5;
---			WHEN S5 => -- ROM Instr 9
---				next_counter <= 10;
---				next_state   <= S6;
---			WHEN S6 => -- ROM Instr 10
---				next_counter <= 11;
---				next_state   <= S7;
---			WHEN S7 => -- ROM Instr 11
---				next_counter <= 12;
---				next_state   <= S8;
---			WHEN S8 => -- ROM Instr 12
---				next_counter <= 13;
---				next_state   <= S9;
---			WHEN S9 => -- ROM Instr 13
---				next_counter <= 14;
+				next_state   <= S5;
+			WHEN S5 => -- ROM Instr 9
+				next_counter <= 4;
+				next_state   <= S6;
+			WHEN S6 => -- ROM Instr 4
+				next_counter <= 5;
+				next_state   <= S7;
+			WHEN S7 => -- ROM Instr 5
+				next_counter <= 6;
+				next_state   <= S8;
+			WHEN S8 => -- ROM Instr 6
+				next_counter <= 7;
+				next_state   <= S9;
+			WHEN S9 => -- ROM Instr 7
+				next_counter <= 8;
+				next_state   <= S10;
+			WHEN S10 => -- ROM Instr 8
+				next_counter <= 9;
 				next_state   <= S_WriteBlue;
 				next_WE<='1';
 			-- ...
