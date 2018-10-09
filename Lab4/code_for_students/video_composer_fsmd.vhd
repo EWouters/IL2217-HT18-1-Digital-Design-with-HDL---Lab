@@ -37,17 +37,13 @@ ARCHITECTURE behaviour OF videoComposer_FSMD IS
 		  --
 		  -- instructions to manage blue color...
 
-		  ('0',	R4,	Rx,	Rx,	 OpInv,  OpShiftR,	'0'), -- S0 Create Mask
---		  ('0',	R4,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S1 Put mask in R4
+		  ('0',	R4,	Rx,	Rx,	 OpInv,  OpShiftR,	'0'), -- S0 Create Mask and Put mask in R4
 		  
-		  ('0',	R4,	R3,	R4,	 OpOr,   OpRotL,	'0'), -- S2 "(mask OR I) ROTL 1" on result bus
---		  ('0',	R4,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S3 store result bus in R4
-		  ('0',	R4,	R4,	Rx,	 OpInc,  OpPass,	'0'), -- S4 "INC R4 by 1" on result bus
---		  ('0',	R4,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S5 store result bus in R4
-		  ('0',	R4,	R4,	Rx,	 OpInv,  OpPass,	'0'), -- S6 "INV R4" on result bus
-		  ('0',	R4,	R3,	R3,	 OpX,    OpShiftL,	'0'), -- S7 store result bus in R4 and SLL R3
---		  ('0',	R3,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S8 store result bus in R3
-		  ('0',	R3,	R3,	R4,	 OpOr,   OpPass,	'1'), -- S9 "R3 OR R4" on result bus and S_WriteBlue
+		  ('0',	R4,	R3,	R4,	 OpOr,   OpRotL,	'0'), -- S1 "(mask OR I) ROTL 1" and store in R4
+		  ('0',	R4,	R4,	Rx,	 OpInc,  OpPass,	'0'), -- S2 "INC R4 by 1" and store in R4
+		  ('0',	R4,	R4,	Rx,	 OpInv,  OpPass,	'0'), -- S3 "INV R4" and store in R4
+		  ('0',	R3,	R3,	R3,	 OpX,    OpShiftL,	'0'), -- S4 "SLL R3" and store in R3
+		  ('0',	Rx,	R3,	R4,	 OpOr,   OpPass,	'1'), -- S5 "R3 OR R4" on result bus and S_WriteBlue
 		  --
 	--	  ('0',	Rx,	R3,	R3,	 OpAnd,  OpPass,	'1'), -- S_WriteBlue
 		  ('0',	Rx,	Rx,	Rx,	 OpAnd,  OpPass,	'0')  --S _Idle
@@ -134,9 +130,9 @@ BEGIN
 				next_state   <= S4;
 			WHEN S4 => -- ROM Instr 8
 				next_counter <= 9;
-				next_state   <= S5;
-			WHEN S5 => -- ROM Instr 9
-				next_counter <= 10;
+--				next_state   <= S5;
+--			WHEN S5 => -- ROM Instr 9
+--				next_counter <= 10;
 --				next_state   <= S6;
 --			WHEN S6 => -- ROM Instr 10
 --				next_counter <= 11;
