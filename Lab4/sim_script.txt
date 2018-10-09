@@ -65,4 +65,4 @@ sim:/test/DUT/U0/U_dataPath/alu1/aluout \
 sim:/test/DUT/U0/U_dataPath/shifter1/shift_in \
 sim:/test/DUT/U0/U_dataPath/shifter1/shift_op \
 sim:/test/DUT/U0/U_dataPath/shifter1/shift_out;
-run 6 ms;
+run 7 ms;
