@@ -36,12 +36,20 @@ ARCHITECTURE behaviour OF videoComposer_FSMD IS
 		  ('1',	R3,	R2,	R2,	 OpAnd,  OpPass,	'1'), -- S_WriteGreen_ReadBlue
 		  --
 		  -- instructions to manage blue color...
-		  ('0',	R3,	R3,	R3,	 OpAnd,  OpShiftL,	'0'), -- S_ShiftL_Blue
-		  ('0',	R3,	R3,	R3,	 OpAnd,  OpPass,	'0'), -- S_Sat_Blue
 
-		  ('0',	R3,	Rx,	Rx,	 OpInv,  OpPass,	'0'), -- S_Sat_Blue
+		  ('0',	R4,	Rx,	Rx,	 OpInv,  OpShiftR,	'0'), -- S0 Create Mask
+--		  ('0',	R4,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S1 Put mask in R4
+		  
+		  ('0',	R4,	R3,	R4,	 OpOr,   OpRotL,	'0'), -- S2 "(mask OR I) ROTL 1" on result bus
+--		  ('0',	R4,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S3 store result bus in R4
+		  ('0',	R4,	R4,	Rx,	 OpInc,  OpPass,	'0'), -- S4 "INC R4 by 1" on result bus
+--		  ('0',	R4,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S5 store result bus in R4
+		  ('0',	R4,	R4,	Rx,	 OpInv,  OpPass,	'0'), -- S6 "INV R4" on result bus
+		  ('0',	R4,	R3,	R3,	 OpX,    OpShiftL,	'0'), -- S7 store result bus in R4 and SLL R3
+--		  ('0',	R3,	Rx,	Rx,	 OpX,    OpPass,	'0'), -- S8 store result bus in R3
+		  ('0',	R3,	R3,	R4,	 OpOr,   OpPass,	'1'), -- S9 "R3 OR R4" on result bus and S_WriteBlue
 		  --
-		  ('0',	Rx,	R3,	R3,	 OpAnd,  OpPass,	'1'), -- S_WriteBlue
+	--	  ('0',	Rx,	R3,	R3,	 OpAnd,  OpPass,	'1'), -- S_WriteBlue
 		  ('0',	Rx,	Rx,	Rx,	 OpAnd,  OpPass,	'0')  --S _Idle
 		);
 
@@ -63,7 +71,7 @@ ARCHITECTURE behaviour OF videoComposer_FSMD IS
 	SIGNAL OutPort     : STD_LOGIC_VECTOR(Size-1 DOWNTO 0);
 	SIGNAL instr : Instruction_type := ( '0' , Rx   , Rx   , Rx   , OpX   , OpX     , '0' );
 
-	TYPE   State_Type IS (reset_state,S_ReadRed, S_ReadGreenWriteRed, S_ReadBlueWriteGreen, S_SatBlue, S_ProcessBlue0, S_ProcessBlue1, S_ProcessBlue2, S_ProcessBlue3, S_WriteBlue, S_Idle);
+	TYPE   State_Type IS (reset_state,S_ReadRed, S_ReadGreenWriteRed, S_ReadBlueWriteGreen, S0, S1, S2, S3, S4, S5, S6, S7, S8, S9, S_WriteBlue, S_Idle);
 
 	SIGNAL current_state,   next_state   : State_Type;
 	-- Instr counter for the datapath
@@ -106,39 +114,43 @@ BEGIN
 				next_WE<='1'; 
 			WHEN S_ReadBlueWriteGreen => -- ROM Instr 3
 				next_WE<='0'; --<='0'; if you add states for processing the blue color
-	--			next_counter <= 4;
-	--			next_state   <= S_ProcessBlue0; --S_WriteBlue;
+				next_counter <= 4;
+				next_state   <= S0; --S_WriteBlue;
 				next_read_address<=read_address+1;
 				next_write_address<=write_address+1;
 			-- ...
 			-- states to manage blue color...
-				IF (DataIn(7)='1' OR DataIn(6)='1') THEN
-					next_counter <= 6;
-					next_state   <= S_SatBlue; --S_ProcessBlue;
-				ELSE
-					next_counter <= 4;
-					next_state   <= S_ProcessBlue0;
-				END IF;
-			WHEN S_SatBlue => -- ROM Instr 6
+			WHEN S0 => -- ROM Instr 4
+				next_counter <= 5;
+				next_state   <= S1;
+			WHEN S1 => -- ROM Instr 5
+				next_counter <= 6;
+				next_state   <= S2;
+			WHEN S2 => -- ROM Instr 6
+				next_counter <= 7;
+				next_state   <= S3;
+			WHEN S3 => -- ROM Instr 7
+				next_counter <= 8;
+				next_state   <= S4;
+			WHEN S4 => -- ROM Instr 8
+				next_counter <= 9;
+				next_state   <= S5;
+			WHEN S5 => -- ROM Instr 9
+				next_counter <= 10;
+--				next_state   <= S6;
+--			WHEN S6 => -- ROM Instr 10
+--				next_counter <= 11;
+--				next_state   <= S7;
+--			WHEN S7 => -- ROM Instr 11
+--				next_counter <= 12;
+--				next_state   <= S8;
+--			WHEN S8 => -- ROM Instr 12
+--				next_counter <= 13;
+--				next_state   <= S9;
+--			WHEN S9 => -- ROM Instr 13
+--				next_counter <= 14;
+				next_state   <= S_WriteBlue;
 				next_WE<='1';
-				next_counter <= 7;
-				next_state   <= S_WriteBlue;
-			WHEN S_ProcessBlue0 => -- ROM Instr 4
-	--			next_WE<='0'; 
-				next_counter <= 5;
-				next_state   <= S_ProcessBlue1;
-			WHEN S_ProcessBlue1 => -- ROM Instr 5
-	--			next_WE<='0'; 
-				next_counter <= 4;
-				next_state   <= S_ProcessBlue2;
-			WHEN S_ProcessBlue2 => -- ROM Instr 5
-	--			next_WE<='0';
-				next_counter <= 5;
-				next_state   <= S_ProcessBlue3;
-			WHEN S_ProcessBlue3 => -- ROM Instr 5
-				next_WE<='1'; 
-				next_counter <= 7;
-				next_state   <= S_WriteBlue;
 			-- ...
 			WHEN S_WriteBlue  => -- ROM Instr 10 or 11
 				next_WE<='0';
